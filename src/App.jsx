@@ -16,10 +16,14 @@ function App() {
         <div className='column has-background-black' style={{width:"80%", height:"40px", marginTop:"5px"}}>
 
         </div>
-        <div className='container' style={{marginTop:"25px"}}>
+        <div style={{marginTop:"25px"}}>
         Select Tip %
-        <div className='column'>5</div>
-        <div className='column'>5</div>
+        </div>
+        <div className='columns is-mobile' style={{marginTop:"25px"}}>
+        <div className='column is-size-4' style={{border:"solid"}}>5</div>
+        <div className='column is-size-4'>5</div>
+        <div className='column is-size-4'>5</div>
+        <div className='column is-size-4'>5</div>
         </div>
       </div>
  
