@@ -7,9 +7,10 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import personIcon from "./assets/images/icon-person.svg";
 import { useState } from "react";
-import { styled } from "@mui/material/styles";
 import "./App.css";
-//need to refactor and split the code into components
+
+//need to refactor, split the code into components and change the border color of custom input
+
 function App() {
   const [bill, setBill] = useState(null);
   const [tip, setTip] = useState(null);
@@ -17,20 +18,6 @@ function App() {
   const [selectedTip, setSelectedTip] = useState(null);
   const [customTip, setCustomTip] = useState(null);
 
-  
-const CustomTextField = styled(TextField)({
-  width: "100%",
-  height: "56px",
-  marginTop: "8px",
-  backgroundColor: "hsl(189, 41%, 97%)",
-  textAlign: "right",
-  fontSize: "24px",
-  textAlignLast: "right",
-  fontFamily:"space",
-  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-    borderColor: "hsl(172, 67%, 45%)",
-  },
-});
 
   function handleTipButtonClick(tipPercentage) {
     if (selectedTip === tipPercentage) {
@@ -272,22 +259,25 @@ const CustomTextField = styled(TextField)({
 
                   <Grid xs={6} sm={4}>
                     <Box sx={{ marginRight: "10px", marginTop: "10px" }}>
-                      <CustomTextField
+                      <TextField
                         className="customInput"
                         placeholder="Custom"
                         type="number"
                         InputProps={{
                           style: {
                             width: "100%",
+                            top:"10px",
                             height: "56px",
                             textAlign: "right",
                             fontSize: "24px",
                             fontFamily:"space",
+                            textAlignLast:"right"
                           },
                         }}
+                        
                         value={customTip !== null ? customTip : ""}
                         onChange={handleCustomInputChange}
-                      ></CustomTextField>
+                      ></TextField>
                     </Box>
                   </Grid>
                 </Grid>
