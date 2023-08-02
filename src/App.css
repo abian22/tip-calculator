@@ -1,50 +1,61 @@
-#root {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@font-face {
+    font-family: 'Space';
+    src: url('./assets/font/SpaceMono-Bold.ttf')
   }
-  to {
-    transform: rotate(360deg);
+  
+  @font-face {
+    font-family: 'regular';
+    src: url('./assets/font/SpaceMono-Regular.ttf')
   }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  @font-face {
+    font-family: 'Italic';
+    src: url('./assets/font/SpaceMono-BoldItalic.ttf')
   }
+
+  .inputNumber::placeholder {
+    color: hsl(185, 41%, 84%);
+    font-family: 'regular';
+  }
+  .inputNumber{
+    border:inherit;
+    border-radius: 5px;
+  }
+  .inputNumber:focus {
+    border: 2px solid hsl(172, 67%, 45%);
+  }
+
+  .card {
+    background-color: white;
+  }
+
+
+
+.tipButton {
+    background-color: red;
 }
 
-.card {
-  padding: 2em;
+.tipButton:hover {
+    background-color: hsl(172, 67%, 45%);
 }
 
-.read-the-docs {
-  color: #888;
-}
 
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
 
 @media (max-width: 600px) {
-  .hero {
-    width: 100vw;
-    height: 100vh;
-    border: solid;
-    border-radius: 30px 30px 0 0;
+  input {
+    width: 100%;
+  }
+}
+
+/* Estilos para el tamaño del input en pantallas medianas */
+@media (min-width: 601px) and (max-width: 960px) {
+  input {
+    width: 50%;
   }
 }
