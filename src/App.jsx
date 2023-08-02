@@ -9,7 +9,7 @@ import personIcon from "./assets/images/icon-person.svg";
 import { useState } from "react";
 import { styled } from "@mui/material/styles";
 import "./App.css";
-
+//need to refactor and split the code into components
 function App() {
   const [bill, setBill] = useState(null);
   const [tip, setTip] = useState(null);
