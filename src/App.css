@@ -29,7 +29,24 @@
     background-color: white;
   }
 
-
+  .customInput {
+    border: inherit;
+    border-radius: 5px;
+    height: 56px;
+    width: 100%;
+    padding: 10px;
+    font-size: 24px;
+    font-family: 'Space';
+    text-align: right;
+    background-color: hsl(189, 41%, 97%);
+    border-color: hsl(172, 67%, 45%);
+    outline: none;
+    margin-top: 10px;
+  }
+  
+  .customInput:focus {
+    border: 2px solid hsl(172, 67%, 45%);
+  }
 
 .tipButton {
     background-color: red;

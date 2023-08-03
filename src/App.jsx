@@ -9,8 +9,7 @@ import personIcon from "./assets/images/icon-person.svg";
 import { useState } from "react";
 import "./App.css";
 
-//need to refactor, split the code into components and change the border color of custom input
-
+//need to refactor and split the code into components 
 function App() {
   const [bill, setBill] = useState(null);
   const [tip, setTip] = useState(null);
@@ -259,25 +258,14 @@ function App() {
 
                   <Grid xs={6} sm={4}>
                     <Box sx={{ marginRight: "10px", marginTop: "10px" }}>
-                      <TextField
+                      <input
                         className="customInput"
                         placeholder="Custom"
                         type="number"
-                        InputProps={{
-                          style: {
-                            width: "100%",
-                            top:"10px",
-                            height: "56px",
-                            textAlign: "right",
-                            fontSize: "24px",
-                            fontFamily:"space",
-                            textAlignLast:"right"
-                          },
-                        }}
-                        
+                     
                         value={customTip !== null ? customTip : ""}
                         onChange={handleCustomInputChange}
-                      ></TextField>
+                      ></input>
                     </Box>
                   </Grid>
                 </Grid>
